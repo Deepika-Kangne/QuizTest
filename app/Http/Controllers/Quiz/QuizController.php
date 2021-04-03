@@ -46,7 +46,7 @@ class QuizController extends Controller
             // $scoreData = Scoreboard::where('user_id', Auth::user()->id);
             $scoreData = Scoreboard::select('id', 'user_id', 'attempt')->where('user_id', Auth::user()->id)->get();
 
-            if ($scoreData[0]->attempt == 'no') {
+            if ($scoreData->count() == 0) {
                 $amount = 5;
                 $client = new GuzzleHttp\Client(['base_uri' => 'https://opentdb.com']);
                 $response = $client->request('GET', '/api.php?amount=' . $amount . '');

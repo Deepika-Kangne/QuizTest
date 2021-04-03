@@ -34,11 +34,9 @@ $_SESSION["test"] = "started";
 
 <body>
     <div class="container">
-        <h1>Customizable Dynamic Quiz Basic Demo</h1>
         <div id="quiz">
             <div id="quiz-header">
                 <h1>Basic Quiz Demo</h1>
-                <p><a id="quiz-home-btn">Home</a></p>
                 <input type="hidden" id="quiz-finalscore" value="" />
             </div>
             <div id="quiz-start-screen">
